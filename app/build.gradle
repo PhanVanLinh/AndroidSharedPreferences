@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
+    flavorDimensions "default"
     defaultConfig {
         applicationId "toong.vn.androidsharedpreferences"
         minSdkVersion 19
@@ -14,6 +15,16 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        demo {
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+        }
+        full {
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
         }
     }
 }
