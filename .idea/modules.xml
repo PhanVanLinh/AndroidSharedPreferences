@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/AndroidSharedPreferences.iml" filepath="$PROJECT_DIR$/.idea/AndroidSharedPreferences.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidSharedPreferences.iml" filepath="$PROJECT_DIR$/AndroidSharedPreferences.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>

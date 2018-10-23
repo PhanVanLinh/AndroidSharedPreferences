@@ -20,6 +20,13 @@
         android:text="Get"
         />
 
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        />
+
     <TextView
         android:id="@+id/text_status"
         android:layout_width="wrap_content"

@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+
 import toong.vn.androidsharedpreferences.api.SharedPreferenceApi;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tvStatus = findViewById(R.id.text_status);
 
-        final SharedPreferenceApi sharedPreferenceApi = new SharedPreferenceApi(this);
+        final SharedPreferenceApi sharedPreferenceApi = new SharedPreferenceApi(this, new Gson());
         sharedPreferenceApi.put(SharedPreferenceApi.PREFS_PASS_WORD, "Password");
         sharedPreferenceApi.put(SharedPreferenceApi.PREFS_PASS_WORD, null);
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sharedPreferenceApi.put(SharedPreferenceApi.PREFS_USER_NAME, "PhanVanLinh");
+
                 tvStatus.setText("Success");
             }
         });
@@ -31,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tvStatus.setText(sharedPreferenceApi.get(SharedPreferenceApi.PREFS_USER_NAME, String.class));
+            }
+        });
+
+        findViewById(R.id.button_clear).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sharedPreferenceApi.get(SharePre)
             }
         });
     }
